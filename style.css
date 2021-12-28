@@ -1,0 +1,1007 @@
+@font-face {
+	font-family: 'GaramondPremrPro';
+	src: url('fonts/Garamond-Premier-Pro.ttf');
+}
+
+@font-face {
+	font-family: 'Futura New Book Reg';
+	src: url('fonts/FuturaNewBook.ttf');
+}
+
+@font-face {
+	font-family: 'Futura New Medium Reg';
+	src: url('fonts/FuturaNewMedium.ttf');
+}
+
+@font-face {
+	font-family: 'Futura New Light Reg';
+	src: url('fonts/FuturaNewLight.ttf');
+}
+
+/*GLOBAL*/
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: 'GaramondPremrPro', serif;
+}
+
+.h1 {
+	font-family: 'Garamond Premier Pro', serif;
+	font-size: 50px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 53px;
+	letter-spacing: 6px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+.h2 {
+	font-size: 44px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 46px;
+	letter-spacing: 5px;
+	text-align: center;
+	text-transform: uppercase;
+	max-width: 750px;
+	width: 100%;
+	margin: 0 auto 50px auto;
+}
+	.h2:before {
+		content: "";
+		max-width: 750px;
+		border: 1px solid #F1DC9A;
+		display: block;
+		margin: 50px auto;
+	}
+.h3 {
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 36px;
+	letter-spacing: 2.5px;
+	text-align: left;
+	text-transform: uppercase;
+}
+	 .h3-irmler {
+		margin-top: 50px;
+		margin-bottom: 30px;
+		text-align: center;
+	 }
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+/*HEADER*/
+.header {
+	background-color: #000000;
+	position: fixed;
+	width: 100vw;
+	z-index: 1000;
+	height: 102px;
+	display: block;
+}
+	.header_inner {
+		display: flex;
+		align-items: center;
+	}
+
+.header_logo {
+	width: 208px;
+	margin-top: 20px;
+}
+
+.nav {
+	display: flex;
+	margin-top: 20px;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.nav_item {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 20px;
+	line-height: 22.4px;
+	letter-spacing: 1.5px;
+	font-family: 'Futura New Book Reg', sans-serif;
+	text-align: center;
+	transition: all .2s;
+}
+	.nav_item:hover {
+		color: #F1DC9A;
+	}
+	.nav_item:active {
+		color: #ccb14c;
+	}
+
+	.mobile_nav {
+		visibility: hidden;
+		color: #fff;
+		position: absolute;
+		width: 100%;
+		top: 100%;
+		left: 0;
+		padding: 15px;
+		background-color: #000;
+		transition: all .3s;
+		-webkit-transition: all .3s;
+		opacity: 0;
+	}
+	.mobile_nav__inner {
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		font-family: 'Futura New Book Reg', sans-serif;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+	.mobile_nav__inner li {
+		list-style-type: none;
+		margin-bottom: 15px;
+	}
+	.mobile_nav__inner li a {
+		text-decoration: none;
+		color: #fff;
+	}
+		.mobile_nav__inner li a:active {
+			color: #ccb14c;
+		}
+
+	.nav_active {
+		visibility: visible;
+		opacity: 1;
+	}
+
+/*INTRO*/
+.intro {
+	background-color: #000;
+	overflow: hidden;
+	height: 100vh;
+	position: relative;
+}
+	.intro_bg {
+		width: 100%;
+		opacity: .7;
+		position: absolute;
+		height: 100vh;
+		object-fit: cover;
+	}
+	.h1, .subtitle {
+		position: relative;
+		top: 40%;
+		text-align: center;
+	}
+		.h1:after {
+			content: "";
+			width: 84px;
+			border: 1px solid #F1DC9A;
+			display: block;
+			margin: 15px auto auto auto;
+		}
+	.subtitle {
+		font-family: 'Futura New Light Reg';
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 26px;
+		letter-spacing: 2px;
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+		max-width: 372px;
+		margin: 24px auto auto auto;
+
+	}
+
+/*PIANODISC PROPERTIES*/
+.pianodisc_property.pianodisc_property--first {
+	margin-top: 276px;
+	position: relative;
+}
+
+.pianodisc_property--reverse {
+	flex-direction: row-reverse;
+}
+	.iphone {
+		position: absolute;
+		top: -470px;
+		width: 1200px;
+		max-width: 100%;
+	}
+.pianodisc_property {
+	display: flex;
+	margin-top: 20px;
+}
+	.pianodisc-property__info__text {
+		font-family: 'Futura New Book Reg';
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 25px;
+		letter-spacing: 0em;
+		text-align: left;
+		margin-top: 10px;
+	}
+.property_img {
+	max-width: 50%;
+	height: 100%;
+	object-fit: contain;
+}
+.pianodisc-property__info {
+	width: 50%;
+	padding-right: 20px;
+	max-width: 590px;
+}
+	.pianodisc-property__info--left {
+		padding-left: 20px;
+	}
+
+/*BUTTON*/ 
+.main_button {
+	display: block;
+	margin: 40px auto;
+	width: 500px;
+	height: 48px;
+	text-transform: uppercase;
+	border: none;
+	background-color: #F1DC9A;
+
+	font-family: 'Futura New Book Reg';
+	font-size: 18px;
+	line-height: 18px;
+	letter-spacing: 1.5px;
+	text-align: center;
+	cursor: pointer;
+	transition: all .2s;
+	max-width: 100%;
+}
+	.main_button:hover {
+			background-color: #e8c557;
+		}
+
+/*IRMLER_F160*/
+.video_wrap {
+	position: relative;
+	width: 100%;
+	height: 550px;
+	max-height: 550px;
+}
+.video {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+.pianodisc-property__info__text--preview {
+	margin: 0;
+	padding-right: 10px;
+	width: 50%;
+}
+
+.irmler_preview_img {
+	max-width: 50%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.irmler_img {
+	margin: 0 auto;
+	display: block;
+	max-width: 100%;
+}
+
+.grandpiano_model_inner {
+	display: flex;
+}
+
+.grandpiano_property {
+
+	font-family: 'Futura New Book Reg';
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px;
+	letter-spacing: 0em;
+	text-align: left;
+	max-width: 746px;
+
+}
+	.property_title, .property_description__title {
+		font-family: 'Futura New Light Reg';
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 26px;
+		letter-spacing: 2px;
+		text-align: left;
+		text-transform: uppercase;
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 5px;
+	}
+	.property_list {
+		list-style-type: none;
+		padding: 0;
+		font-family: 'Futura New Medium Reg', sans-serif;
+	}
+		.property_list li span {
+			font-family: 'Futura New Light Reg', sans-serif;
+		}
+		.property_description {
+			margin-top: 7px;
+			font-family: 'Futura New Light Reg', sans-serif;
+		}
+
+/*FORM*/ 
+.h2--form {
+	margin-bottom: 0;
+}
+.subtitle_form {
+	color: #000;
+	margin-top: 20px;
+	max-width: 568px;
+}
+
+.form_main {
+	max-width: 744px;
+	width: 100%;
+	margin: 50px auto 80px auto;
+
+	font-family: 'Futura New Light Reg', sans-serif;
+}
+
+.label_phone, .label_name, .label_email, .label_comment {
+	margin: 0 0 5px 0;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 17px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #000;
+}
+	.label_phone {
+		font-family: 'Futura New Book Reg', sans-serif;
+	}
+	.required {
+		margin: 10px 0 23px 0;
+	}
+
+.input {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 15px;
+	border: 0.5px solid rgba(0, 0, 0, 0.82);
+	padding-left: 15px;
+	padding-top: 4px;
+	outline: none;
+	font-family: 'Futura New Light Reg', sans-serif;
+	font-size: 20px;
+}
+	.input--bold {
+		margin: 0;
+		border: 2px solid #000000;
+		padding-left: 15px;
+		padding-top: 4px;
+		font-family: 'Futura New Book Reg', sans-serif;
+	font-size: 20px;
+	}
+
+.comment {
+	resize: none;
+	outline: none;
+	width: 100%;
+	height: 80px;
+	padding: 10px 0 0 15px;
+	font-family: 'Futura New Light Reg',sans-serif;
+	color: #838383;
+	font-size: 20px;
+	}
+	.comment::placeholder {
+		font-family: 'Futura New Light Reg', sans-serif;
+		color: #838383;
+		font-size: 20px;
+	}
+		.comment:focus::placeholder {
+			color: transparent;
+		}
+
+.form_button {
+	max-width: 744px;
+	width: 100%;
+	cursor: pointer;
+}
+/*FOOTER*/
+.footer_body {
+	font-family: 'Futura New Book Reg', sans-serif;
+	position: relative;
+	display: flex;
+	color: #fff;
+	height: auto;
+}
+
+.yandex_map, .yandex_map_astana {
+	max-height: 582px;
+}
+
+.contacts {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.7);
+	left: 50%;
+	width: 50%;
+	height: 100%;
+}
+	.contacts_inner {
+		padding: 30px 20px 100px 60px;
+	}
+
+.h2--footer {
+	text-align-last: left;
+	margin: 0;
+}
+	.h2--footer::before {
+		display: none;
+	}
+
+.contacts_cities {
+	display: flex;
+	margin: 5px 0 20px 0;
+	font-size: 20px;
+	font-family: 'Futura New Medium Reg', sans-serif;
+	font-weight: 100;
+}
+	.almaty {
+		margin-right: 15px;
+	}
+	.almaty, .astana {
+		padding-bottom: 2px;
+		cursor: pointer;
+		transition: all .2s;
+	}
+		.almaty:hover, .astana:hover {
+			border-bottom: 1px solid #F1DC9A;
+		}
+	.city_active {
+		border-bottom: 1px solid #F1DC9A;
+	}
+
+.contacts_address {
+	max-width: 365px;
+	font-size: 18px;
+}
+	.contacts_address:after {
+		content: "";
+		max-width: 365px;
+		width: 100%;
+		border: 1px solid #F1DC9A;
+		display: block;
+		margin: 8px 0;
+	}
+
+.contacts_phones {
+	font-size: 24px;
+	margin-bottom: 10px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px;
+	letter-spacing: 3px;
+	text-align: left;
+}
+	.phone {
+		margin-bottom: 5px;
+	}
+
+.contacts_almaty, .contacts_astana {
+	height: 143px;
+	transition: all .5s;
+	opacity: 1;
+}
+
+.contacts_email {
+	margin-bottom: 18px;
+	font-size: 18px;
+}
+	.contacts_email a {
+		text-decoration: none;
+		color: #fff;
+		transition: all .2s;
+	}
+	.contacts_email a:hover {
+		color: #F1DC9A;
+	}
+
+.contacts_button {
+	margin: 20px 0 10px 0;
+	max-width: 381px;
+	width: 100%;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.contacts_text {
+	color: #F1DC9A;
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+.contacts_email--global {
+	margin-bottom: 10px;
+}
+
+.contacts_social {
+	list-style-type: none;
+	display: flex;
+	padding: 0;
+}
+	.social_icon {
+		margin-right: 10px;
+	}
+		.social_icon a:hover {
+			background-color: #e8c557;
+		}
+		.social_icon a {
+			display: block;
+			width: 30px;
+			height: 30px;
+			background-color: #F1DC9A;
+			border-radius: 50%;
+			padding-top: 3px;
+			transition: all .2s;
+		}
+		.social_icon a img {
+			width: 20px;
+			height: 20px;
+			margin: 0 auto;
+			display: block;
+			padding-top: 4px;
+		}
+		
+
+/*COPYRIGHT*/
+.copyright {
+	color: #000;
+	text-align: center;
+	margin: 20px;
+	font-family: 'GaramondPremrPro', serif;
+	font-size: 13px;
+	font-weight: 100;
+	letter-spacing: 1px;
+}
+
+/*POPUP*/
+.hide {
+	display: none;
+	background-color: rgba(0,0,0,0);
+	opacity: 0;
+}
+
+.popup_bg {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 1001;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+.popup_bg_form {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 1001;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+
+/*POPUP SUCCESS*/
+.popup_success {
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+	width: 720px;
+	height: 200px;
+	margin: 0 auto;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	opacity: 1;
+	z-index: 1000;
+}
+
+.popup_success__content {
+	padding: 35px;
+}
+
+.popup_success__title {
+	font-family: 'GaramondPremrPro', serif;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 31px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	max-width: 260px;
+	margin: 0 auto;
+
+}
+
+.popup_success__text {
+	font-family: 'Futura New Light Reg', sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 21px;
+	letter-spacing: 0px;
+	max-width: 280px;
+	margin: 20px auto auto auto;
+}
+
+/*POPUP FORM*/
+.popup_form-window {
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+	width: 600px;
+	height: auto;
+	margin: 0 auto;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	opacity: 1;
+	z-index: 1000;
+}
+
+.popup_form__content {
+	width: 82%;
+	margin: 30px auto;
+	position: relative;
+}
+	.close_btn {
+		position: absolute;
+		right: -30px;
+		top: -20px;
+		font-family: 'GaramondPremrPro', serif;
+		font-size: 25px;
+		cursor: pointer;
+		transition: all .2s;
+	}
+		.close_btn:hover {
+			color: #F1DC9A;
+		}
+
+.popup_form {
+	width: 82%;
+	margin: 0 auto;
+}
+
+.popup_form__title {
+	width: 100%;
+	max-width: 400px;
+}
+
+.popup_button {
+	margin-bottom: 0;
+}
+
+.popup_form {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.popup_label_name {
+	margin-top: 15px;
+}
+
+.popup_required {
+	text-align-last: left;
+}
+
+.popup_input, .popup_input--bold {
+	padding-left: 10px;
+}
+
+
+/*-----------MEDIA-----------*/
+
+@media screen and (max-width: 1000px) {
+
+	/*H*/
+	.h1 {
+		font-size: 42px;
+	}
+	.h2 {
+		font-size: 38px;
+	}
+	.h3 {
+		font-size: 28px;
+		letter-spacing: 1.5px;
+	}
+
+	/*HEADER*/
+	.nav_item {
+		font-size: 16px;
+	}
+
+	/*PIANODISC PROPERTIES*/
+	.pianodisc-property__info__text {
+		font-size: 16px;
+		margin-top: 0;
+		line-height: 22px;
+	}
+
+
+	/*GRANDPIANO_MODEL*/
+	.grandpiano_model_inner {
+		display: block;
+	}
+	.grandpiano_property {
+		margin: 0 auto;
+	}
+
+}
+
+@media screen and (max-width: 900px) {
+	/*FOOTER*/
+	.footer_body {
+		display: block;
+	}
+	.contacts {
+		width: 100%;
+		position: static;
+	}
+	.contacts_inner {
+		padding: 20px 10px;
+		width: 100%;
+	}
+
+	.contacts_button, .contacts_address, .contacts_address:after {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 850px) {
+
+/*YOUTUBE*/
+.video_wrap {
+	height: 450px;
+}
+
+/*BURGER MENU*/
+.header {
+	height: 82px;
+}
+	.header_inner {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+
+.header_logo {
+width: 148px;
+}
+
+.nav {
+	display: none;
+}
+
+.burger_menu {
+	width: 37px;
+	height: 30px;
+	color: #fff;
+	display: block;
+	position: relative;
+	margin-top: 10px;
+}
+
+.burger_menu span {
+	background-color: #fff;
+	width: 37px;
+	height: 3px;
+	position: absolute;
+	top: 50%;
+	transition: all .3s;
+}
+	.burger_menu span:before {
+		content: "";
+		width: 100%;
+		height: 3px;
+		background-color: #fff;
+		top: -9px;
+		position: absolute;
+		transition: all .3s;
+	}
+	.burger_menu span:after {
+		content: "";
+		width: 100%;
+		height: 3px;
+		background-color: #fff;
+		bottom: -9px;
+		position: absolute;
+		transition: all .3s;
+	}
+
+	.burger_menu.active span {
+		background-color: rgba(255, 255, 255, 0);
+	 }	
+
+	 .burger_menu.active span:before {
+		top: 0;
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	 }
+	 
+	 .burger_menu.active span:after {
+		bottom: 0;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	 }
+}
+
+@media screen and (max-width: 800px) {
+	/*PROPERTIES*/
+	.pianodisc_property {
+		display: block;
+		text-align: center;
+	}
+	
+	.pianodisc-property__info {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+		margin-bottom: 100px;
+	}
+
+	.property_img {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.pianodisc_property--irmler {
+		display: block;
+	}
+
+	.pianodisc-property__info__text--preview {
+		width: 100%;
+	}
+
+	.irmler_preview_img {
+		width: 100%;
+		max-width: 100%;
+		margin-top: 50px;
+	}
+
+}
+	
+
+@media screen and (max-width: 750px) {
+	
+	/*H*/
+	.h1 {
+		font-size: 36px;
+		line-height: 40px;
+		max-width: 90%;
+		margin: 0 auto;
+	}
+		.subtitle {
+			font-size: 15px;
+			line-height: 20px;
+		}
+	.h2 {
+		font-size: 32px;
+		line-height: 36px;
+		margin-bottom: 30px;
+	}
+	.h3 {
+		font-size: 28px;
+		letter-spacing: 1.5px;
+	}
+
+	.main_button {
+		font-size: 15px;
+	}
+
+	.property_title, .property_description__title {
+		font-size: 22px;
+	}
+
+	.video {
+		height: 100%;
+	}
+}
+	
+@media screen and (max-width: 650px) {
+	/*YOUTUBE*/
+	.video_wrap {
+		height: 350px;
+	}
+	/*POPUP-FORM*/
+	.popup_form-window {
+		width: 90%;
+	}
+	
+	.close_btn {
+		right: -7%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	/*YOUTUBE*/
+	.video_wrap {
+		height: 300px;
+	}
+	/*POPUP-FORM*/
+	.popup_form__title {
+		font-size: 26px;
+	}
+
+	.popup_label_name, .popup_label_phone, .popup_input--bold, .popup_input {
+		font-size: 18px;
+		padding-top: 0;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	/*YOUTUBE*/
+	.video_wrap {
+		height: 200px;
+	}
+	/*H*/
+	.h1 {
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	.h2 {
+		font-size: 28px;
+		line-height: 30px;
+	}
+
+	.h3 {
+		font-size: 25px;
+	}
+
+	.main_button {
+		margin: 20px auto;
+	}
+
+	.property_title, .property_description__title {
+		font-size: 20px;
+	}
+
+	.label_phone, .label_name, .label_email, .label_comment, .input, .input--bold {
+		font-size: 18px;
+	}
+
+	textarea .comment {
+		font-size: 18px;
+	}
+
+	/*POPUP FORM*/
+	.popup_form__title {
+		padding-top: 20px;
+	}
+}
