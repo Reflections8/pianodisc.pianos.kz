@@ -728,6 +728,10 @@ h1, h2, h3, h4, h5, h6 {
 	padding-left: 10px;
 }
 
+a, button, label, input, textarea {
+	-webkit-tap-highlight-color: transparent;
+}
+
 
 /*-----------MEDIA-----------*/
 
