@@ -521,9 +521,10 @@ h1, h2, h3, h4, h5, h6 {
 	.phone {
 		-webkit-appearance: none !important;
 		appearance: none !important;
-		margin-bottom: 5px;
+		color: #fff !important;
+		text-decoration: none !important;
 		-webkit-text-decoration-skip: objects;
-		color: #fff;
+		margin-bottom: 5px;
 	}
 
 .contacts_almaty, .contacts_astana {
