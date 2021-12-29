@@ -516,7 +516,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 	.phone {
 		margin-bottom: 5px;
-		text-decoration: none;
+		-webkit-text-decoration-skip: objects;
 		color: #fff;
 	}
 
