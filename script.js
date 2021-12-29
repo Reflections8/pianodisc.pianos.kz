@@ -89,7 +89,6 @@ formBtnPopUp.addEventListener('click', function () {
 /*PHONE MASK*/
 let phoneInputs = document.querySelectorAll('input[data-tel-input]');
 let phoneInputsPop = popupBgForm.querySelectorAll('input[data-tel-input]');
-console.log(phoneInputs);
 
 
 let getInputNumbersValue = function(input) {
