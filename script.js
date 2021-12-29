@@ -53,15 +53,18 @@ almaty.addEventListener('click', function() {
 
 footerBtn.addEventListener('click', function () {
 	popupBgForm.classList.remove('hide');
+	popupBgForm.classList.add('popup_animate');
 });
 
 pianoDiscBtn.addEventListener('click', function () {
 	popupBgForm.classList.remove('hide');
+	popupBgForm.classList.add('popup_animate');
 });
 
 
 popupClose.addEventListener('click', function() {
 	popupBgForm.classList.add('hide');
+	popupBgForm.classList.remove('popup_animate');
 });
 
 //popup for main form
@@ -75,9 +78,11 @@ popupClose.addEventListener('click', function() {
 
 formBtnPopUp.addEventListener('click', function () {
 	popupBgForm.classList.add('hide');
+	popupSuccess.classList.add('popup_animate');
 	popupSuccess.classList.remove('hide');
 	setTimeout(function(){ 
 		popupSuccess.classList.add('hide');
+		popupSuccess.classList.remove('popup_animate');
 		}, 3000);
 });
 
