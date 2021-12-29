@@ -518,6 +518,7 @@ h1, h2, h3, h4, h5, h6 {
 		margin-bottom: 5px;
 		-webkit-text-decoration-skip: objects;
 		color: #fff;
+		-webkit-appearance: none;
 	}
 
 .contacts_almaty, .contacts_astana {
