@@ -19,7 +19,9 @@ let burgerIcon = document.querySelector('.burger_menu'),
 	 formBtnPopUp = popupBgForm.querySelector('.form_button'),
 	 popupSuccess = document.querySelector('.popup_bg'),
 
-	 pianoDiscBtn = document.querySelector('.pianodisc_button');
+	 pianoDiscBtn = document.querySelector('.pianodisc_button'),
+	 userPhone = document.querySelector('.input--bold');
+	 console.log(userPhone);
 
 
 
