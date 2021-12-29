@@ -960,6 +960,20 @@ width: 148px;
 }
 	
 @media screen and (max-width: 650px) {
+	/*HEADER*/
+	.header {
+		height: 60px;
+	}
+
+	.header_logo {
+		width: 91px;
+		margin-top: 18px;
+	}
+
+	.burger_menu {
+		margin: 7px 7px 0 0;
+	}
+	
 	/*YOUTUBE*/
 	.video_wrap {
 		height: 350px;
