@@ -23,6 +23,10 @@
 	box-sizing: border-box;
 }
 
+a, button, label, input, textarea {
+	-webkit-tap-highlight-color: transparent;
+}
+
 body {
 	margin: 0;
 }
@@ -515,10 +519,11 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: left;
 }
 	.phone {
+		-webkit-appearance: none !important;
+		appearance: none !important;
 		margin-bottom: 5px;
 		-webkit-text-decoration-skip: objects;
 		color: #fff;
-		-webkit-appearance: none;
 	}
 
 .contacts_almaty, .contacts_astana {
@@ -726,10 +731,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .popup_input, .popup_input--bold {
 	padding-left: 10px;
-}
-
-a, button, label, input, textarea {
-	-webkit-tap-highlight-color: transparent;
 }
 
 
