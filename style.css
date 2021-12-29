@@ -295,6 +295,7 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	width: 100%;
 	position: absolute;
+	border: 0px;
 }
 .pianodisc-property__info__text--preview {
 	margin: 0;
@@ -445,6 +446,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .yandex_map, .yandex_map_astana {
 	max-height: 582px;
+	width: 100%;
+	border: 0px;
 }
 
 .contacts {
