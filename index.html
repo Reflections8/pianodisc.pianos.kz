@@ -158,20 +158,20 @@
 				<h2 class="h2 h2--form" id="contact_us">Как связаться с нами</h2>
 				<p class="subtitle subtitle_form">Оставьте свои контактные данные - менеджер свяжется с Вами в ближайшее
 					время</p>
-				<form action="#" class="form_main">
+				<form action="#" id="#main-form" class="form_main">
 					<p class="label_phone">Телефон*</p>
-					<input class="input input--bold" type="tel" data-tel-input placeholder="+7 (***) *** ** **"
+					<input class="input input--bold" name="phone" type="tel" data-tel-input placeholder="+7 (***) *** ** **"
 						maxlength="20" required>
 					<p class="required">*поле обязательно для заполнения</p>
 
 					<p class="label_name">Имя</p>
-					<input class="input" type="text" placeholder="Иван" maxlength="50">
+					<input class="input" name="name" type="text" placeholder="Иван" maxlength="50">
 
 					<p class="label_email">Электронная почта</p>
-					<input class="input" type="email" placeholder="email@email.com" maxlength="50">
+					<input class="input" name="email" type="email" placeholder="email@email.com" maxlength="50">
 
 					<p class="label_comment">Ваш комментарий</p>
-					<textarea class="comment" placeholder="Ваши комментарии..." maxlength="300"></textarea>
+					<textarea class="comment" name="comment" placeholder="Ваши комментарии..." maxlength="300"></textarea>
 
 					<button class="main_button form_button">Получить консультацию</button>
 				</form>
@@ -292,6 +292,9 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="jquery.validate.min.js"></script>
+	<script src="jquery.maskedinput.min.js"></script>
 	<script src="script.js"></script>
 </body>
 

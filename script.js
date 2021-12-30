@@ -20,8 +20,9 @@ let burgerIcon = document.querySelector('.burger_menu'),
 	 popupSuccess = document.querySelector('.popup_bg'),
 
 	 pianoDiscBtn = document.querySelector('.pianodisc_button'),
-	 userPhone = document.querySelector('.input--bold');
-	 console.log(userPhone);
+	 mainForm = document.getElementById('#main-form');
+	 mainPhone = mainForm[0];
+	 console.log(mainPhone);
 
 
 
@@ -78,7 +79,9 @@ popupClose.addEventListener('click', function() {
 		}, 3000);
 }); */
 
-formBtnPopUp.addEventListener('click', function () {
+
+/*SUCCESS SUBMIT*/
+/* formBtnPopUp.addEventListener('click', function () {
 	popupBgForm.classList.add('hide');
 	popupSuccess.classList.add('popup_animate');
 	popupSuccess.classList.remove('hide');
@@ -86,7 +89,7 @@ formBtnPopUp.addEventListener('click', function () {
 		popupSuccess.classList.add('hide');
 		popupSuccess.classList.remove('popup_animate');
 		}, 3000);
-});
+}); */
 
 /*PHONE MASK*/
 let phoneInputs = document.querySelectorAll('input[data-tel-input]');
@@ -169,5 +172,29 @@ for (i = 0; i < phoneInputs.length; i++) {
 	input.addEventListener('keydown', onPhoneKeyDown);
 	input.addEventListener('paste', onPhonePaste);
 }
+
+'use strict'
+/*SUBMIT*/
+console.log('form');
+$('form').submit(function(e) {
+	e.preventDefault();
+	$.ajax({
+		type: "POST",
+		url: "mailer/smart.php",
+		data: $(this).serialize()
+	}).done(function() {
+		$(this).find("input").val("");
+
+		popupBgForm.classList.add('hide');
+		popupSuccess.classList.add('popup_animate');
+		popupSuccess.classList.remove('hide');
+		setTimeout(function(){ 
+		popupSuccess.classList.add('hide');
+		popupSuccess.classList.remove('popup_animate');
+		}, 3000);
+		$('form').trigger('reset');
+	});
+	return false;
+});
 
 });
