@@ -295,6 +295,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 	border: none;
 	background-color: #F1DC9A;
+	color: #000;
 	-webkit-color: #000;
 
 	font-family: 'Futura New Book Reg';
