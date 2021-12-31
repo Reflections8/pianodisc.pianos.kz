@@ -20,7 +20,8 @@
 
 /*GLOBAL*/
 *, *:before, *:after {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 a, button, label, input, textarea {
@@ -99,8 +100,12 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 }
 	.header_inner {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 
 .header_logo {
@@ -109,9 +114,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin-top: 20px;
-	justify-content: space-evenly;
+	-webkit-box-pack: space-evenly;
+	    -ms-flex-pack: space-evenly;
+	        justify-content: space-evenly;
 	width: 100%;
 }
 
@@ -124,6 +133,8 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: 1.5px;
 	font-family: 'Futura New Book Reg', sans-serif;
 	text-align: center;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
 	transition: all .2s;
 }
 	.nav_item:hover {
@@ -142,6 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 		left: 0;
 		padding: 15px;
 		background-color: #000;
+		-o-transition: all .3s;
 		transition: all .3s;
 		-webkit-transition: all .3s;
 		opacity: 0;
@@ -184,7 +196,8 @@ h1, h2, h3, h4, h5, h6 {
 		opacity: .7;
 		position: absolute;
 		height: 100vh;
-		object-fit: cover;
+		-o-object-fit: cover;
+		   object-fit: cover;
 	}
 	.h1, .subtitle {
 		position: relative;
@@ -220,7 +233,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pianodisc_property--reverse {
-	flex-direction: row-reverse;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	    -ms-flex-direction: row-reverse;
+	        flex-direction: row-reverse;
 }
 
 .section--first {
@@ -232,12 +248,16 @@ h1, h2, h3, h4, h5, h6 {
 		position: absolute;
 		top: -31%;
 		left: 50%;
-		transform: translate(-50%);
+		-webkit-transform: translate(-50%);
+		    -ms-transform: translate(-50%);
+		        transform: translate(-50%);
 		width: 1200px;
 		max-width: 100%;
 		z-index: 10000;
 	}
 .pianodisc_property {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin-top: 20px;
 }
@@ -254,7 +274,8 @@ h1, h2, h3, h4, h5, h6 {
 .property_img {
 	max-width: 50%;
 	height: 100%;
-	object-fit: contain;
+	-o-object-fit: contain;
+	   object-fit: contain;
 }
 .pianodisc-property__info {
 	width: 50%;
@@ -282,6 +303,8 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: 1.5px;
 	text-align: center;
 	cursor: pointer;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
 	transition: all .2s;
 	max-width: 100%;
 }
@@ -311,7 +334,8 @@ h1, h2, h3, h4, h5, h6 {
 .irmler_preview_img {
 	max-width: 50%;
 	height: 100%;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
 
 .irmler_img {
@@ -321,6 +345,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .grandpiano_model_inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -426,11 +452,43 @@ h1, h2, h3, h4, h5, h6 {
 	color: #838383;
 	font-size: 20px;
 	}
+	.comment::-webkit-input-placeholder {
+		font-family: 'Futura New Light Reg', sans-serif;
+		color: #838383;
+		font-size: 20px;
+	}
+	.comment::-moz-placeholder {
+		font-family: 'Futura New Light Reg', sans-serif;
+		color: #838383;
+		font-size: 20px;
+	}
+	.comment:-ms-input-placeholder {
+		font-family: 'Futura New Light Reg', sans-serif;
+		color: #838383;
+		font-size: 20px;
+	}
+	.comment::-ms-input-placeholder {
+		font-family: 'Futura New Light Reg', sans-serif;
+		color: #838383;
+		font-size: 20px;
+	}
 	.comment::placeholder {
 		font-family: 'Futura New Light Reg', sans-serif;
 		color: #838383;
 		font-size: 20px;
 	}
+		.comment:focus::-webkit-input-placeholder {
+			color: transparent;
+		}
+		.comment:focus::-moz-placeholder {
+			color: transparent;
+		}
+		.comment:focus:-ms-input-placeholder {
+			color: transparent;
+		}
+		.comment:focus::-ms-input-placeholder {
+			color: transparent;
+		}
 		.comment:focus::placeholder {
 			color: transparent;
 		}
@@ -444,6 +502,8 @@ h1, h2, h3, h4, h5, h6 {
 .footer_body {
 	font-family: 'Futura New Book Reg', sans-serif;
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	color: #fff;
 	height: auto;
@@ -475,6 +535,8 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 .contacts_cities {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin: 5px 0 20px 0;
 	font-size: 20px;
@@ -487,6 +549,8 @@ h1, h2, h3, h4, h5, h6 {
 	.almaty, .astana {
 		padding-bottom: 2px;
 		cursor: pointer;
+		-webkit-transition: all .2s;
+		-o-transition: all .2s;
 		transition: all .2s;
 	}
 		.almaty:hover, .astana:hover {
@@ -520,7 +584,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 	.phone {
 		-webkit-appearance: none !important;
-		appearance: none !important;
+		-moz-appearance: none !important;
+		     appearance: none !important;
 		color: #fff !important;
 		text-decoration: none !important;
 		-webkit-text-decoration: none !important;
@@ -530,6 +595,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .contacts_almaty, .contacts_astana {
 	height: 143px;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
 	transition: all .5s;
 	opacity: 1;
 }
@@ -541,6 +608,8 @@ h1, h2, h3, h4, h5, h6 {
 	.contacts_email a {
 		text-decoration: none;
 		color: #fff;
+		-webkit-transition: all .2s;
+		-o-transition: all .2s;
 		transition: all .2s;
 	}
 	.contacts_email a:hover {
@@ -567,6 +636,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .contacts_social {
 	list-style-type: none;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 0;
 }
@@ -583,6 +654,8 @@ h1, h2, h3, h4, h5, h6 {
 			background-color: #F1DC9A;
 			border-radius: 50%;
 			padding-top: 3px;
+			-webkit-transition: all .2s;
+			-o-transition: all .2s;
 			transition: all .2s;
 		}
 		.social_icon a img {
@@ -617,11 +690,15 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 1001;
 	top:50%;
 	left:50%;
-	transform:translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
+	    -ms-transform:translate(-50%, -50%);
+	        transform:translate(-50%, -50%);
 	overflow: auto;
 }
 
 	.popup_animate {
+		-webkit-transition: background-color .5s linear;
+		-o-transition: background-color .5s linear;
 		transition: background-color .5s linear;
 		background-color: rgba(0,0,0,0.7);
 	}
@@ -635,12 +712,20 @@ h1, h2, h3, h4, h5, h6 {
 	height: 200px;
 	margin: 0 auto;
 	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	top:50%;
 	left:50%;
-	transform:translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
+	    -ms-transform:translate(-50%, -50%);
+	        transform:translate(-50%, -50%);
 	opacity: 1;
 	z-index: 1000;
 }
@@ -698,6 +783,8 @@ h1, h2, h3, h4, h5, h6 {
 		font-family: 'GaramondPremrPro', serif;
 		font-size: 25px;
 		cursor: pointer;
+		-webkit-transition: all .2s;
+		-o-transition: all .2s;
 		transition: all .2s;
 	}
 		.close_btn:hover {
@@ -728,7 +815,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .popup_required {
-	text-align-last: left;
+	-moz-text-align-last: left;
+	     text-align-last: left;
 }
 
 .popup_input, .popup_input--bold {
@@ -812,8 +900,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 	.header_inner {
 		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: space-between;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
 	}
 
 .header_logo {
@@ -839,6 +931,8 @@ width: 148px;
 	height: 3px;
 	position: absolute;
 	top: 50%;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
 	transition: all .3s;
 }
 	.burger_menu span:before {
@@ -848,6 +942,8 @@ width: 148px;
 		background-color: #fff;
 		top: -9px;
 		position: absolute;
+		-webkit-transition: all .3s;
+		-o-transition: all .3s;
 		transition: all .3s;
 	}
 	.burger_menu span:after {
@@ -857,6 +953,8 @@ width: 148px;
 		background-color: #fff;
 		bottom: -9px;
 		position: absolute;
+		-webkit-transition: all .3s;
+		-o-transition: all .3s;
 		transition: all .3s;
 	}
 
@@ -867,13 +965,15 @@ width: 148px;
 	 .burger_menu.active span:before {
 		top: 0;
 		-webkit-transform: rotate(-45deg);
-		transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		    transform: rotate(-45deg);
 	 }
 	 
 	 .burger_menu.active span:after {
 		bottom: 0;
 		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		    transform: rotate(45deg);
 	 }
 }
 
