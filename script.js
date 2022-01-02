@@ -22,9 +22,48 @@ let burgerIcon = document.querySelector('.burger_menu'),
 	 pianoDiscBtn = document.querySelector('.pianodisc_button'),
 	 mainForm = document.getElementById('#main-form');
 	 mainPhone = mainForm[0];
-	 console.log(mainPhone);
 
+/*ANIMATION*/
+	let fadeItems = document.querySelectorAll('.anim-items');
 
+	if (fadeItems.length > 0) {
+		window.addEventListener('scroll', fadeOnScroll);
+		function fadeOnScroll(params) {
+			for (let i = 0; i < fadeItems.length; i++) {
+				const fadeItem = fadeItems[i];
+				const fadeItemHeight = fadeItem.offsetHeight;
+				const fadeItemOffset = offset(fadeItem).top;
+				const fadeStart = 4;
+
+				let fadeItemPoint = window.innerHeight - fadeItemHeight / fadeStart;
+
+				if (fadeItemHeight > window.innerHeight) {
+					fadeItemPoint = window.innerHeight - window.innerHeight / fadeStart;
+				}
+				if((window.pageYOffset > fadeItemOffset - fadeItemPoint) && window.pageYOffset < (fadeItemOffset + fadeItemHeight)) {
+					fadeItem.classList.add('fade-in');
+				} else {
+					if (!fadeItem.classList.contains('anim-no-hide')) {
+					fadeItem.classList.remove('fade-in');
+				}
+			}
+		}
+	}
+
+		function offset(el) {
+			const rect = el.getBoundingClientRect(),
+				scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+				scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+		}
+
+		setTimeout(() => {
+			fadeOnScroll();
+		}, 200);
+
+	};
+
+/*BURGER*/
 
 burgerIcon.addEventListener('click', function() {
 	if (burgerIcon.classList.contains('active') && burgerMenu.classList.contains('nav_active')) {

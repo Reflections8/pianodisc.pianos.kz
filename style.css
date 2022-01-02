@@ -48,6 +48,9 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: 100;
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 1s ease 0s;
 }
 
 .h2 {
@@ -223,8 +226,30 @@ h1, h2, h3, h4, h5, h6 {
 		text-transform: uppercase;
 		max-width: 372px;
 		margin: 24px auto auto auto;
-
+		transform: translate(0px, 120%);
+		opacity: 0;
+		transition: all 1s ease 0s;
 	}
+		.subtitle.fade-in {
+		transform: translate(0px, 0px);
+		opacity: 1;
+		transition: all 1s ease 0.4s;
+
+		}
+		.fade-in {
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+
+		.fade-show {
+			transform: translate(120%, 0px);
+			opacity: 0;
+			transition: all 0.8s ease 0.2s;
+		}
+			.fade-show.fade-in {
+				transform: translate(0px, 0px);
+				opacity: 1;
+			}
 
 /*PIANODISC PROPERTIES*/
 .pianodisc_property.pianodisc_property--first {
