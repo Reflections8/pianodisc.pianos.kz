@@ -33,7 +33,7 @@ let burgerIcon = document.querySelector('.burger_menu'),
 				const fadeItem = fadeItems[i];
 				const fadeItemHeight = fadeItem.offsetHeight;
 				const fadeItemOffset = offset(fadeItem).top;
-				const fadeStart = 4;
+				const fadeStart = 16;
 
 				let fadeItemPoint = window.innerHeight - fadeItemHeight / fadeStart;
 

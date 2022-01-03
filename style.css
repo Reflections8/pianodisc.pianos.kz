@@ -228,12 +228,12 @@ h1, h2, h3, h4, h5, h6 {
 		margin: 24px auto auto auto;
 		transform: translate(0px, 120%);
 		opacity: 0;
-		transition: all 1s ease 0s;
+		transition: all 1s ease 0.4s;
 	}
 		.subtitle.fade-in {
 		transform: translate(0px, 0px);
 		opacity: 1;
-		transition: all 1s ease 0.4s;
+		transition: all 0.8s ease 0.4s;
 
 		}
 		.fade-in {
@@ -244,7 +244,7 @@ h1, h2, h3, h4, h5, h6 {
 		.fade-show {
 			transform: translate(0, 120%);
 			opacity: 0;
-			transition: all 0.8s ease 0.2s;
+			transition: all 0.6s ease 0s;
 		}
 			.fade-show.fade-in {
 				transform: translate(0px, 0px);
@@ -426,7 +426,7 @@ h1, h2, h3, h4, h5, h6 {
 .form_main {
 	max-width: 744px;
 	width: 100%;
-	margin: 50px auto 80px auto;
+	margin: 40px auto 80px auto;
 
 	font-family: 'Futura New Light Reg', sans-serif;
 }
